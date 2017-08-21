@@ -41,21 +41,36 @@ public class Dispatcher extends HttpServlet{
 			RequestDispatcher dispatcher = req.getRequestDispatcher("listadoPlazas.jsp");
 			dispatcher.forward(req, resp);
 			break;
-		
 		case 3 :
 			List<Parkingplace> plazasLibres = controlador.listarPlazasLibres();		
 			req.setAttribute("plazas", plazasLibres);			
 			RequestDispatcher dispatcher2 = req.getRequestDispatcher("altaReserva.jsp");
 			dispatcher2.forward(req, resp);
-			
+			break;
+		case 4:
+			List<Client> clientes = controlador.listarClientes();
+			req.setAttribute("clientes", clientes);
+			RequestDispatcher dispatcher4 = req.getRequestDispatcher("listadoClientes.jsp");
+			dispatcher4.forward(req, resp);
+			break;
 		case 5 :
 			List<Booking> reservas=controlador.listarReservas();			
 			req.setAttribute("reservas", reservas);			
 			RequestDispatcher dispatcher3 = req.getRequestDispatcher("listadoReservas.jsp");
 			dispatcher3.forward(req, resp);
-			
 			break;
-
+		case 6 :
+			List<Vehicle> vehiculos=controlador.listarVehiculos();			
+			req.setAttribute("vehiculos", vehiculos);			
+			RequestDispatcher dispatcher6 = req.getRequestDispatcher("listadoVehiculos.jsp");
+			dispatcher6.forward(req, resp);
+			break;
+		case 7 :
+			List<Booking> reservasFecha =controlador.listarReservasByFecha();			
+			req.setAttribute("reservasFecha", reservasFecha);			
+			RequestDispatcher dispatcher7 = req.getRequestDispatcher("formularioFechasReservas.jsp");
+			dispatcher7.forward(req, resp);
+			break;
 		default:
 			break;
 		}
@@ -96,6 +111,11 @@ public class Dispatcher extends HttpServlet{
 		controladorGaraje.reservarPlaza(client, vehicle);
 		
 		resp.sendRedirect("menu.jsp");
+		
+		String reservasFechas = req.getParameter("reservasFechas");
+		if(reservasFechas != null) {
+			
+		}
 		
 	}
 	
