@@ -14,54 +14,40 @@
 <body>
 
 	<form method="post" action="/GarageJSP/dispatcher"> 
-	
+	<input type="hidden" value="${reserva.idbooking}" name="idBooking" />
 	<h4>Nombre del Cliente:</h1>
 		
-	<input type="text" name="name" />
+	<input type="text" name="name" value="${reserva.client.name}" />
+	
 	
 	<h4>Apellidos del Cliente</h1>
 		
-	<input type="text" name="surname" />
-	
+	<input type="text" name="surname" value="${reserva.client.surname}" />
 
 	<br/>
 	
 	<h4>Nif del Cliente</h1>
 		
-	<input type="text" name="nif" />
-	
+	<input type="text" name="nif" value="${reserva.client.nif}" />
 
 	<br/>
 	<h4>Telefono del cliente</h1>
 		
-	<input type="text" name="tlf" />
-
+	<input type="text" name="tlf" value="${reserva.client.telephone}" />
 
 	<br/>
 	<h4>Matricula de vehiculo </h1>
 		
-	<input type="text" name="plate" />
-	
+	<input type="text" name="plate" value="${reserva.vehicle.vehicleplate}"/>
 
 	<br/>
 	<h4>Modelo del vehiculo</h1>
 		
-	<select name="vehicleModel">
-	 
-	  <c:forEach items="${coches}" var="coche">	
-			<option value="${coche}">${coche}</option>	
-	   </c:forEach>
-	
-	</select>
-	
-
-	<br/>	
-	
-	
+	<input type="text" name="vehicleModel" value="${reserva.vehicle.vehiclemodel}"/>
 	<br/>
 	<br/>
-	<input type="submit" value="Reservar" />
-	
+	<br/>
+	<input type="submit" value="Editar la reserva" name="editarReserva"/>
 	
 	</form>
 

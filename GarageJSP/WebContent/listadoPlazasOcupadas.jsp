@@ -13,19 +13,17 @@
 </head>
 <body>
 	
-	LISTA DE RESERVAS </br>
+	<h1>Listado de plazas ocupadas</h1>
 	
-	<br/>
 	<div>
-	<form method="get" action="/GarageJSP/dispatcher?option=8">
-	<c:forEach items="${reservas}" var="reserva">
 	
-		<c:out value="${reserva}"></c:out>
-		<a href="/GarageJSP/dispatcher?option=8&id=${reserva.idbooking}">Editar</a>
-		<br/><br/>
+	<c:forEach items="${plazas}" var="plaza">
+	
+		<c:out value="${plaza}"></c:out>
+		</br>
 	
 	</c:forEach>
-	</form>
+	
 	</div>
 	
 </body>
