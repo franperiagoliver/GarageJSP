@@ -109,7 +109,7 @@ public class Dispatcher extends HttpServlet {
 		ControladorGaraje controladorGaraje = new ControladorGarajeImpl();
 		Integer idBooking = Integer.valueOf(req.getParameter("idBooking"));
 		
-		if(req.getAttribute("idBooking")== null) {
+		if(req.getAttribute("idBooking")!=null) {
 			
 			Booking booking = controladorGaraje.listarReservasById(idBooking);
 			
