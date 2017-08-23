@@ -9,14 +9,14 @@
 <title>GARAGE MANAGEMENT APP</title>
 </head>
 <body>
-<form method="post" action="/GarageJSP/dispatcher">
+<form method="post" action="/GarageJSP/bookingDate">
 		<h2>ELIGE LA FECHA DE INICIO Y DE FIN</h2>
 		<h3>Fecha de inicio:</h3>
-		<input type="date" name="fecInicio" step="1" value="2000-01-01" /><br/>
+		<input type="date" name="fechaInicio" step="1"/><br/>
 		<h3>Fecha de fin: </h3>
-		<input type="date" name="fecFin" step="1" value="2000-01-01" /><br/>
-		<input type="hidden" name="reservasFechas"/>
-		<input type="submit" value="Listar reservas" />
+		<input type="date" name="fechaFin" step="1"/><br/><br/>
+		<input type="hidden" name="filtroFecha" value="filtroFecha"/>
+		<input type="submit" value="Listar reservas" name="ListarFec" />
 	</form>
 
 </body>

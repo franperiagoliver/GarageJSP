@@ -6,9 +6,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>GARAGE MANAGMENT APP</title>
+<script type="text/javascript">
+		
+		if(${ok}) {
+			alert(${mensaje});
+		}
+	
+</script>
 </head>
 <body>
-
+	
 	<label>Elige una opción : </br></label>
 
 	 </br>

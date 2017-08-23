@@ -13,7 +13,7 @@
 </head>
 <body>
 
-	<form method="post" action="/GarageJSP/dispatcher"> 
+	<form method="post" action="/GarageJSP/booking"> 
 	
 	<h4>Nombre del Cliente:</h1>
 		

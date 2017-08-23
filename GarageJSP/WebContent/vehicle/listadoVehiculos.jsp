@@ -10,11 +10,14 @@
 </head>
 <body>
 <div>
+<form method="get" action="/GarageJSP/dispatcher?option=10">
 <h1>LISTADO DE VEHICULOS</h1>
 	<c:forEach items="${vehiculos}" var="vehiculo">
 		<c:out value="${vehiculo}"></c:out>
-		<br/>
+		<a href="/GarageJSP/dispatcher?option=10&id=${vehiculo.idvehicle}">Editar</a>
+		<br/><br/>
 	</c:forEach>
+</form>
 </div>
 </body>
 </html>

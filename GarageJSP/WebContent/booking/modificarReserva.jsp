@@ -13,7 +13,7 @@
 </head>
 <body>
 
-	<form method="post" action="/GarageJSP/dispatcher"> 
+	<form method="post" action="/GarageJSP/booking"> 
 	<input type="hidden" value="${reserva.idbooking}" name="idBooking" />
 	<h4>Nombre del Cliente:</h1>
 		
